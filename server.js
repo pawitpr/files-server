@@ -21,25 +21,7 @@ wss.on('connection', (ws) => {
   });
 });
 
-const http = require('http');
 
-const server = http.createServer( (req,res ) => {
-   // ..
-   if (req.url !== '/') {
-    return res.end();
-   }
-
-   console.log("Request is comming !");
-   const readSteam = fs.createReadStream('files.bin');
-   readSteam.pipe(res);
-});
-const dotenv = require('dotenv').config();
-
-const PORT =  3000
-server.listen(PORT, () => {
-  console.log('Port is ' + PORT);
-  
-})
 console.log('received file name : ' + 'files.bin') 
 
 const dgram = require('dgram');
