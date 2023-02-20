@@ -26,7 +26,7 @@ console.log('received file name : ' + 'files.bin')
 
 const dgram = require('dgram');
 const server = dgram.createSocket('udp4');
-const fs = require('fs');
+
 
 const PORT = 8000;
 const HOST = '127.0.0.1';
