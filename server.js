@@ -7,7 +7,7 @@ const server = dgram.createSocket('udp4');
 
 
 const PORT = 8000;
-const HOST = '127.0.0.1';
+const HOST = '0.0.0.0';
 
 server.on('listening', function () {
   const address = server.address();
