@@ -35,7 +35,7 @@ const server = http.createServer( (req,res ) => {
 });
 const dotenv = require('dotenv').config();
 
-const PORT = process.env.PORT || 3000
+const PORT =  3000
 server.listen(PORT, () => {
   console.log('Port is ' + PORT);
   
