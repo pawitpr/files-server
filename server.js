@@ -1,28 +1,6 @@
-const fs = require('fs');
-const WebSocket = require('ws');
-
-const wss = new WebSocket.Server({ port: 8080 });
-
-wss.on('connection', (ws) => {
-  console.log('Client connected');
-
-  ws.on('message', (message) => {
-    if (message instanceof Buffer) {
-      console.log('Received file');
-
-      fs.writeFile('files.bin', message, (err) => {
-        if (err) {
-          console.error(`Error writing file: ${err}`);
-        } else {
-          console.log('File saved');
-        }
-      });
-    }
-  });
-});
 
 
-console.log('received file name : ' + 'files.bin') 
+
 
 const dgram = require('dgram');
 const server = dgram.createSocket('udp4');
